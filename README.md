@@ -28,6 +28,7 @@ or alternatively run the bash script when using linux:
 ./run_script.sh
 ```
 This will create a virtual environment and automatically install all dependencies + it will create a binary.
+
 6. The Graphical User Interface opens
 
 ## Contributing to `E-Assessment-Manager`
@@ -44,4 +45,4 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 ## License
 
-This project uses the following license: 
+This project uses the following license: MIT License
