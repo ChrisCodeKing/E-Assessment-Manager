@@ -1,0 +1,652 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- filename=ims_qtiresv1p2.xsd -->
+<!-- Copyright (2) 2001 IMS Global Learning Consortium, Inc. -->
+<xs:schema targetNamespace="http://www.imsglobal.org/xsd/ims_qtiresv1p2" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:x="http://www.w3.org/XML/1998/namespace" xmlns="http://www.imsglobal.org/xsd/ims_qtiresv1p2" elementFormDefault="qualified" version="IMS QTI RES 1.2">
+	<!-- **************************** -->
+	<!-- ** Inclusions and Imports ** -->
+	<!-- **************************** -->
+	<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="http://www.w3.org/2001/03/xml.xsd"/>
+	<!-- ****************** -->
+	<!-- ** Root Element ** -->
+	<!-- ****************** -->
+	<xs:element name="qti_result_report" type="qti_result_reportType"/>
+	<!-- ************************** -->
+	<!-- ** ELEMENT DEFINITIONS ** -->
+	<!-- ************************** -->
+	<xs:element name="asi_description" type="asi_descriptionType"/>
+	<xs:element name="asi_metadata" type="asi_metadataType"/>
+	<xs:element name="asi_metadatafield" type="asi_metadatafieldType"/>
+	<xs:element name="assessment_result" type="assessment_resultType"/>
+	<xs:element name="context" type="contextType"/>
+	<xs:element name="control" type="controlType"/>
+	<xs:element name="correct_response" type="xs:string"/>
+	<xs:element name="date" type="dateType"/>
+	<xs:element name="datetime" type="xs:string"/>
+	<xs:element name="duration" type="xs:string"/>
+	<xs:element name="extension_assessment_result" type="extension_assessment_resultType"/>
+	<xs:element name="extension_context" type="extension_contextType"/>
+	<xs:element name="extension_grade" type="extension_gradeType"/>
+	<xs:element name="extension_item_result" type="extension_item_resultType"/>
+	<xs:element name="extension_response" type="extension_responseType"/>
+	<xs:element name="extension_responseform" type="extension_responseformType"/>
+	<xs:element name="extension_result" type="extension_resultType"/>
+	<xs:element name="extension_score" type="extension_scoreType"/>
+	<xs:element name="extension_section_result" type="extension_section_resultType"/>
+	<xs:element name="extension_summary_result" type="extension_summary_resultType"/>
+	<xs:element name="feedback_displayed" type="feedback_displayedType"/>
+	<xs:element name="field_name" type="xs:string"/>
+	<xs:element name="field_value" type="xs:string"/>
+	<xs:element name="generic_identifier" type="generic_identifierType"/>
+	<xs:element name="grade" type="gradeType"/>
+	<xs:element name="grade_cut" type="xs:string"/>
+	<xs:element name="grade_value" type="xs:string"/>
+	<xs:element name="identifier_string" type="xs:string"/>
+	<xs:element name="item_result" type="item_resultType"/>
+	<xs:element name="name" type="xs:string"/>
+	<xs:element name="num_attempts" type="xs:string"/>
+	<xs:element name="num_items" type="xs:string"/>
+	<xs:element name="num_items_attempted" type="xs:string"/>
+	<xs:element name="num_items_presented" type="xs:string"/>
+	<xs:element name="num_sections" type="xs:string"/>
+	<xs:element name="num_sections_presented" type="xs:string"/>
+	<xs:element name="objective" type="objectiveType"/>
+	<xs:element name="outcomes" type="outcomesType"/>
+	<xs:element name="qti_comment" type="qti_commentType"/>
+	<xs:element name="response" type="responseType"/>
+	<xs:element name="response_form" type="response_formType"/>
+	<xs:element name="response_value" type="response_valueType"/>
+	<xs:element name="result" type="resultType"/>
+	<xs:element name="score" type="scoreType"/>
+	<xs:element name="score_average" type="xs:string"/>
+	<xs:element name="score_cut" type="xs:string"/>
+	<xs:element name="score_interpretation" type="score_interpretationType"/>
+	<xs:element name="score_max" type="xs:string"/>
+	<xs:element name="score_min" type="xs:string"/>
+	<xs:element name="score_normalized" type="xs:string"/>
+	<xs:element name="score_reliability" type="xs:string"/>
+	<xs:element name="score_std_error" type="xs:string"/>
+	<xs:element name="score_value" type="xs:string"/>
+	<xs:element name="section_result" type="section_resultType"/>
+	<xs:element name="status" type="statusType"/>
+	<xs:element name="status_value" type="xs:string"/>
+	<xs:element name="summary_result" type="summary_resultType"/>
+	<xs:element name="type_label" type="type_labelType"/>
+	<xs:element name="vocabulary" type="vocabularyType"/>
+	<!-- ************************************* -->
+	<!-- ** CORE OBJECT DEFINITIONS ** -->
+	<!-- ************************************* -->
+	<!-- ************ -->
+	<!-- ** result ** -->
+	<!-- ************ -->
+	<xs:complexType name="resultType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="context" type="contextType"/>
+			<xs:choice>
+				<xs:element name="summary_result" type="summary_resultType"/>
+				<xs:element name="assessment_result" type="assessment_resultType"/>
+				<xs:element name="section_result" type="section_resultType"/>
+				<xs:element name="item_result" type="item_resultType"/>
+			</xs:choice>
+			<xs:element ref="extension_result" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- *********************** -->
+	<!-- ** assessment_result ** -->
+	<!-- *********************** -->
+	<xs:complexType name="assessment_resultType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="asi_metadata" type="asi_metadataType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="asi_description" type="asi_descriptionType" minOccurs="0"/>
+			<xs:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="duration" minOccurs="0"/>
+			<xs:element name="objective" type="objectiveType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="control" type="controlType" minOccurs="0"/>
+			<xs:element name="outcomes" type="outcomesType" minOccurs="0"/>
+			<xs:element name="feedback_displayed" type="feedback_displayedType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="num_items" minOccurs="0"/>
+			<xs:element ref="num_sections" minOccurs="0"/>
+			<xs:element ref="num_items_presented" minOccurs="0"/>
+			<xs:element ref="num_items_attempted" minOccurs="0"/>
+			<xs:element ref="num_sections_presented" minOccurs="0"/>
+			<xs:element name="section_result" type="section_resultType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="extension_assessment_result" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="ident_ref" type="xs:string"/>
+		<xs:attribute name="asi_title" type="xs:string"/>
+	</xs:complexType>
+	<!-- ******************** -->
+	<!-- ** section_result ** -->
+	<!-- ******************** -->
+	<xs:complexType name="section_resultType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="asi_metadata" type="asi_metadataType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="asi_description" type="asi_descriptionType" minOccurs="0"/>
+			<xs:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="duration" minOccurs="0"/>
+			<xs:element name="objective" type="objectiveType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="control" type="controlType" minOccurs="0"/>
+			<xs:element name="outcomes" type="outcomesType" minOccurs="0"/>
+			<xs:element name="feedback_displayed" type="feedback_displayedType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="num_items" minOccurs="0"/>
+			<xs:element ref="num_sections" minOccurs="0"/>
+			<xs:element ref="num_items_presented" minOccurs="0"/>
+			<xs:element ref="num_items_attempted" minOccurs="0"/>
+			<xs:element ref="num_sections_presented" minOccurs="0"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="section_result" type="section_resultType"/>
+				<xs:element name="item_result" type="item_resultType"/>
+			</xs:choice>
+			<xs:element ref="extension_section_result" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="asi_title" type="xs:string"/>
+		<xs:attribute name="ident_ref" type="xs:string"/>
+		<xs:attribute name="presented" default="Yes">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Yes"/>
+					<xs:enumeration value="No"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- ***************** -->
+	<!-- ** item_result ** -->
+	<!-- ***************** -->
+	<xs:complexType name="item_resultType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="asi_metadata" type="asi_metadataType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="asi_description" type="asi_descriptionType" minOccurs="0"/>
+			<xs:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="duration" minOccurs="0"/>
+			<xs:element name="objective" type="objectiveType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="control" type="controlType" minOccurs="0"/>
+			<xs:element name="response" type="responseType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="outcomes" type="outcomesType" minOccurs="0"/>
+			<xs:element name="feedback_displayed" type="feedback_displayedType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="extension_item_result" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="asi_title" type="xs:string"/>
+		<xs:attribute name="ident_ref" type="xs:string"/>
+		<xs:attribute name="presented" default="Yes">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Yes"/>
+					<xs:enumeration value="No"/>
+					<xs:enumeration value="Unknown"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- ************************************** -->
+	<!-- ** SUPPORT OBJECT DEFINITIONS ** -->
+	<!-- ************************************** -->
+	<!-- ********************* -->
+	<!-- ** asi_description ** -->
+	<!-- ********************* -->
+	<xs:complexType name="asi_descriptionType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ****************** -->
+	<!-- ** asi_metadata ** -->
+	<!-- ****************** -->
+	<xs:complexType name="asi_metadataType">
+		<xs:sequence>
+			<xs:element name="vocabulary" type="vocabularyType" minOccurs="0"/>
+			<xs:element name="asi_metadatafield" type="asi_metadatafieldType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- *********************** -->
+	<!-- ** asi_metadatafield ** -->
+	<!-- *********************** -->
+	<xs:complexType name="asi_metadatafieldType">
+		<xs:sequence>
+			<xs:element ref="field_name"/>
+			<xs:element ref="field_value"/>
+		</xs:sequence>
+		<xs:attribute ref="x:lang"/>
+	</xs:complexType>
+	<!-- ************* -->
+	<!-- ** context ** -->
+	<!-- ************* -->
+	<xs:complexType name="contextType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element ref="name" minOccurs="0"/>
+			<xs:element name="generic_identifier" type="generic_identifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="extension_context" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ************* -->
+	<!-- ** control ** -->
+	<!-- ************* -->
+	<xs:complexType name="controlType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="hint_switch" default="No">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="Yes"/>
+							<xs:enumeration value="No"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="solution_switch" default="No">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="Yes"/>
+							<xs:enumeration value="No"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="feedback_switch" default="No">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="Yes"/>
+							<xs:enumeration value="No"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ********** -->
+	<!-- ** date ** -->
+	<!-- ********** -->
+	<xs:complexType name="dateType">
+		<xs:sequence>
+			<xs:element name="type_label" type="type_labelType" minOccurs="0"/>
+			<xs:element ref="datetime"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ************************ -->
+	<!-- ** feedback_displayed ** -->
+	<!-- ************************ -->
+	<xs:complexType name="feedback_displayedType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+				<xs:attribute name="ident_ref" type="xs:string"/>
+				<xs:attribute name="asi_title" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ************************ -->
+	<!-- ** generic_identifier ** -->
+	<!-- ************************ -->
+	<xs:complexType name="generic_identifierType">
+		<xs:sequence>
+			<xs:element name="type_label" type="type_labelType" minOccurs="0"/>
+			<xs:element ref="identifier_string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- *********** -->
+	<!-- ** grade ** -->
+	<!-- *********** -->
+	<xs:complexType name="gradeType">
+		<xs:sequence>
+			<xs:element ref="grade_value"/>
+			<xs:element ref="grade_cut" minOccurs="0"/>
+			<xs:element ref="extension_grade" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="varname" type="xs:string" default="SCORE"/>
+		<xs:attribute name="status" default="Valid">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Valid"/>
+					<xs:enumeration value="Noanswer"/>
+					<xs:enumeration value="Error"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="members" type="xs:string"/>
+	</xs:complexType>
+	<!-- *************** -->
+	<!-- ** objective ** -->
+	<!-- *************** -->
+	<xs:complexType name="objectiveType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="view" default="All">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="All"/>
+							<xs:enumeration value="Administrator"/>
+							<xs:enumeration value="AdminAuthority"/>
+							<xs:enumeration value="Assessor"/>
+							<xs:enumeration value="Author"/>
+							<xs:enumeration value="Candidate"/>
+							<xs:enumeration value="InvigilatorProctor"/>
+							<xs:enumeration value="Psychometrician"/>
+							<xs:enumeration value="Scorer"/>
+							<xs:enumeration value="Tutor"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ************** -->
+	<!-- ** outcomes ** -->
+	<!-- ************** -->
+	<xs:complexType name="outcomesType">
+		<xs:sequence>
+			<xs:element name="status" type="statusType" minOccurs="0"/>
+			<xs:choice minOccurs="0" maxOccurs="unbounded">
+				<xs:element name="score" type="scoreType"/>
+				<xs:element name="grade" type="gradeType"/>
+			</xs:choice>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ***************** -->
+	<!-- ** qti_comment ** -->
+	<!-- ***************** -->
+	<xs:complexType name="qti_commentType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute ref="x:lang"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- *********************** -->
+	<!-- ** qti_result_report ** -->
+	<!-- *********************** -->
+	<xs:complexType name="qti_result_reportType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="result" type="resultType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ************** -->
+	<!-- ** response ** -->
+	<!-- ************** -->
+	<xs:complexType name="responseType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="response_form" type="response_formType" minOccurs="0"/>
+			<xs:element ref="num_attempts" minOccurs="0"/>
+			<xs:element name="response_value" type="response_valueType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="extension_response" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="ident_ref" type="xs:string"/>
+	</xs:complexType>
+	<!-- ******************* -->
+	<!-- ** response_form ** -->
+	<!-- ******************* -->
+	<xs:complexType name="response_formType">
+		<xs:sequence>
+			<xs:element ref="correct_response" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element ref="extension_responseform" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="cardinality">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="single"/>
+					<xs:enumeration value="multiple"/>
+					<xs:enumeration value="ordered"/>
+					<xs:enumeration value="extension"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="render_type">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="choice"/>
+					<xs:enumeration value="hotspot"/>
+					<xs:enumeration value="slider"/>
+					<xs:enumeration value="fib"/>
+					<xs:enumeration value="extension"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="timing">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Yes"/>
+					<xs:enumeration value="No"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="response_type">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="lid"/>
+					<xs:enumeration value="xy"/>
+					<xs:enumeration value="str"/>
+					<xs:enumeration value="num"/>
+					<xs:enumeration value="grp"/>
+					<xs:enumeration value="extension"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- ******************** -->
+	<!-- ** response_value ** -->
+	<!-- ******************** -->
+	<xs:complexType name="response_valueType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+				<xs:attribute name="response_status" default="Valid">
+					<xs:simpleType>
+						<xs:restriction base="xs:NMTOKEN">
+							<xs:enumeration value="Null"/>
+							<xs:enumeration value="Valid"/>
+							<xs:enumeration value="NA"/>
+							<xs:enumeration value="Invalid"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:attribute>
+				<xs:attribute name="response_time" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- *********** -->
+	<!-- ** score ** -->
+	<!-- *********** -->
+	<xs:complexType name="scoreType">
+		<xs:sequence>
+			<xs:element ref="score_value"/>
+			<xs:element name="score_interpretation" type="score_interpretationType" minOccurs="0"/>
+			<xs:element ref="score_min" minOccurs="0"/>
+			<xs:element ref="score_max" minOccurs="0"/>
+			<xs:element ref="score_normalized" minOccurs="0"/>
+			<xs:element ref="score_average" minOccurs="0"/>
+			<xs:element ref="score_std_error" minOccurs="0"/>
+			<xs:element ref="score_reliability" minOccurs="0"/>
+			<xs:element ref="score_cut" minOccurs="0"/>
+			<xs:element ref="extension_score" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="varname" type="xs:string" default="SCORE"/>
+		<xs:attribute name="vartype" default="Integer">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Integer"/>
+					<xs:enumeration value="Decimal"/>
+					<xs:enumeration value="Scientific"/>
+					<xs:enumeration value="String"/>
+					<xs:enumeration value="Boolean"/>
+					<xs:enumeration value="Set"/>
+					<xs:enumeration value="Enumerated"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+		<xs:attribute name="status" default="Valid">
+			<xs:simpleType>
+				<xs:restriction base="xs:NMTOKEN">
+					<xs:enumeration value="Valid"/>
+					<xs:enumeration value="Noanswer"/>
+					<xs:enumeration value="Error"/>
+				</xs:restriction>
+			</xs:simpleType>
+		</xs:attribute>
+	</xs:complexType>
+	<!-- ************************** -->
+	<!-- ** score_interpretation ** -->
+	<!-- ************************** -->
+	<xs:complexType name="score_interpretationType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ************ -->
+	<!-- ** status ** -->
+	<!-- ************ -->
+	<xs:complexType name="statusType">
+		<xs:sequence>
+			<xs:element name="type_label" type="type_labelType" minOccurs="0"/>
+			<xs:element ref="datetime" minOccurs="0"/>
+			<xs:element ref="status_value"/>
+		</xs:sequence>
+	</xs:complexType>
+	<!-- ******************** -->
+	<!-- ** summary_result ** -->
+	<!-- ******************** -->
+	<xs:complexType name="summary_resultType">
+		<xs:sequence>
+			<xs:element name="qti_comment" type="qti_commentType" minOccurs="0"/>
+			<xs:element name="type_label" type="type_labelType" minOccurs="0"/>
+			<xs:element name="generic_identifier" type="generic_identifierType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="date" type="dateType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="status" type="statusType" minOccurs="0"/>
+			<xs:element ref="duration" minOccurs="0"/>
+			<xs:element name="score" type="scoreType" minOccurs="0"/>
+			<xs:element name="grade" type="gradeType" minOccurs="0"/>
+			<xs:element name="outcomes" type="outcomesType" minOccurs="0"/>
+			<xs:element ref="extension_summary_result" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="asi_title" type="xs:string"/>
+	</xs:complexType>
+	<!-- **************** -->
+	<!-- ** type_label ** -->
+	<!-- **************** -->
+	<xs:complexType name="type_labelType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="source" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- **************** -->
+	<!-- ** vocabulary ** -->
+	<!-- **************** -->
+	<xs:complexType name="vocabularyType">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="uri" type="xs:string"/>
+				<xs:attribute name="entityref" type="xs:ENTITY"/>
+				<xs:attribute name="vocab_type" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<!-- ***************************** -->
+	<!-- ** EXTENTION DEFINITIONS ** -->
+	<!-- ***************************** -->
+	<!-- ********************************* -->
+	<!-- ** extension_assessment_result ** -->
+	<!-- ********************************* -->
+	<xs:complexType name="extension_assessment_resultType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- *********************** -->
+	<!-- ** extension_context ** -->
+	<!-- *********************** -->
+	<xs:complexType name="extension_contextType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ********************* -->
+	<!-- ** extension_grade ** -->
+	<!-- ********************* -->
+	<xs:complexType name="extension_gradeType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- *************************** -->
+	<!-- ** extension_item_result ** -->
+	<!-- *************************** -->
+	<xs:complexType name="extension_item_resultType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ************************ -->
+	<!-- ** extension_response ** -->
+	<!-- ************************ -->
+	<xs:complexType name="extension_responseType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- **************************** -->
+	<!-- ** extension_responseform ** -->
+	<!-- **************************** -->
+	<xs:complexType name="extension_responseformType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ********************** -->
+	<!-- ** extension_result ** -->
+	<!-- ********************** -->
+	<xs:complexType name="extension_resultType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ********************* -->
+	<!-- ** extension_score ** -->
+	<!-- ********************* -->
+	<xs:complexType name="extension_scoreType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ****************************** -->
+	<!-- ** extension_section_result ** -->
+	<!-- ****************************** -->
+	<xs:complexType name="extension_section_resultType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+	<!-- ****************************** -->
+	<!-- ** extension_summary_result ** -->
+	<!-- ****************************** -->
+	<xs:complexType name="extension_summary_resultType" mixed="true">
+		<xs:sequence>
+			<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:anyAttribute processContents="lax"/>
+	</xs:complexType>
+</xs:schema>

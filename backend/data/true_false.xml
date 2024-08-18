@@ -1,0 +1,253 @@
+<item ident="207859" title="True - False">
+	<qticomment>
+		This is a simple True/False multiple-choice example using V1.2.
+		The rendering is a standard radio button style.
+		Response processing is incorporated.
+	</qticomment>
+
+
+	<duration></duration>
+
+
+	<itemmetadata>
+		<qtimetadata>
+			<qtimetadatafield>
+				<fieldlabel>qmd_itemtype</fieldlabel>
+
+
+				<fieldentry>True False</fieldentry>
+
+
+			</qtimetadatafield>
+
+
+			<qtimetadatafield>
+				<fieldlabel>TEXT_FORMAT</fieldlabel>
+
+
+				<fieldentry>HTML</fieldentry>
+
+
+			</qtimetadatafield>
+
+
+			<qtimetadatafield>
+        <fieldlabel>ITEM_OBJECTIVE</fieldlabel>
+
+
+        <fieldentry></fieldentry>
+
+
+      </qtimetadatafield>
+
+
+      <qtimetadatafield>
+        <fieldlabel>ITEM_KEYWORD</fieldlabel>
+
+
+        <fieldentry></fieldentry>
+
+
+      </qtimetadatafield>
+
+
+      <qtimetadatafield>
+        <fieldlabel>ITEM_RUBRIC</fieldlabel>
+
+
+        <fieldentry></fieldentry>
+
+
+      </qtimetadatafield>
+
+
+	  <qtimetadatafield>
+		<fieldlabel>ITEM_TAGS</fieldlabel>
+
+
+		<fieldentry></fieldentry>
+
+
+	  </qtimetadatafield>
+
+
+      <qtimetadatafield>
+        <fieldlabel>ATTACHMENT</fieldlabel>
+
+
+        <fieldentry></fieldentry>
+
+
+      </qtimetadatafield>
+
+
+         
+      <qtimetadatafield>
+        <fieldlabel>hasRationale</fieldlabel>
+
+
+        <fieldentry>false</fieldentry>
+
+
+      </qtimetadatafield>
+
+
+		</qtimetadata>
+
+
+	</itemmetadata>
+
+
+	<rubric view="All">
+      <material>
+        <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+
+
+      </material>
+
+
+    </rubric>
+
+
+	<presentation label="Resp001">
+		<flow class="Block">
+			<material>
+				<mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[Diese Frage ist mit Richtig zu beantworten!]]></mattext>
+
+
+			</material>
+
+
+			<material>
+				<matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+
+
+			</material>
+
+
+			<response_lid ident="TF02" rcardinality="Single" rtiming="No">
+				<render_choice shuffle="No">
+					<response_label ident="A" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+						<material>
+							<mattext charset="ascii-us" texttype="text/plain" xml:space="default">True</mattext>
+
+
+						</material>
+
+
+					</response_label>
+
+
+					<response_label ident="B" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+						<material>
+							<mattext charset="ascii-us" texttype="text/plain" xml:space="default">False</mattext>
+
+
+						</material>
+
+
+					</response_label>
+
+
+				</render_choice>
+
+
+			</response_lid>
+
+
+		</flow>
+
+
+	</presentation>
+
+
+	<resprocessing>
+		<outcomes>
+			<decvar defaultval="0" maxvalue="0.0" minvalue="0.0" varname="SCORE" vartype="Integer"></decvar>
+
+
+		</outcomes>
+
+
+		<respcondition continue="No" title="Correct">
+			<conditionvar>
+				<varequal case="Yes" respident="TF02">A</varequal>
+
+
+			</conditionvar>
+
+
+			<setvar action="Add" varname="SCORE">0</setvar>
+
+
+			<displayfeedback feedbacktype="Response" linkrefid="Correct"></displayfeedback>
+
+
+		</respcondition>
+
+
+		<respcondition continue="No" title="InCorrect">
+			<conditionvar>
+				<varequal case="Yes" respident="TF02">B</varequal>
+
+
+			</conditionvar>
+
+
+			<setvar action="Add" varname="SCORE">0</setvar>
+
+
+			<displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+
+
+		</respcondition>
+
+
+	</resprocessing>
+
+
+	<itemfeedback ident="Correct" view="All">
+		<flow_mat class="Block">
+			<material>
+				<mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+
+
+			</material>
+
+
+			<material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+
+
+            </material>
+
+
+		</flow_mat>
+
+
+	</itemfeedback>
+
+
+	<itemfeedback ident="InCorrect" view="All">
+		<flow_mat class="Block">
+			<material>
+				<mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+
+
+			</material>
+
+
+			<material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+
+
+            </material>
+
+
+		</flow_mat>
+
+
+	</itemfeedback>
+
+
+</item>

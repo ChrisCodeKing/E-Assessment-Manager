@@ -1,0 +1,941 @@
+<item ident="207857" title="Multiple Choice">
+    <duration></duration>
+  
+  
+    <itemmetadata>
+      <qtimetadata>
+        <qtimetadatafield>
+          <fieldlabel>qmd_itemtype</fieldlabel>
+  
+  
+          <fieldentry>Multiple Choice</fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>TEXT_FORMAT</fieldlabel>
+  
+  
+          <fieldentry>HTML</fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        
+  
+        <qtimetadatafield>
+          <fieldlabel>ITEM_OBJECTIVE</fieldlabel>
+  
+  
+          <fieldentry></fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>ITEM_KEYWORD</fieldlabel>
+  
+  
+          <fieldentry></fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>ITEM_RUBRIC</fieldlabel>
+  
+  
+          <fieldentry></fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>ITEM_TAGS</fieldlabel>
+  
+  
+          <fieldentry></fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>ATTACHMENT</fieldlabel>
+  
+  
+          <fieldentry></fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        
+        <qtimetadatafield>
+          <fieldlabel>hasRationale</fieldlabel>
+  
+  
+          <fieldentry>false</fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>PARTIAL_CREDIT</fieldlabel>
+  
+  
+          <fieldentry>FALSE</fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+        <qtimetadatafield>
+          <fieldlabel>RANDOMIZE</fieldlabel>
+  
+  
+          <fieldentry>false</fieldentry>
+  
+  
+        </qtimetadatafield>
+  
+  
+      </qtimetadata>
+  
+  
+    </itemmetadata>
+  
+  
+  <rubric view="All">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+      </rubric>
+  
+  
+    <presentation label="Resp003">
+      <flow class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[Was kommt nach A? Es gibt eine richtig Antwort.]]></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+        <response_lid ident="MCSC" rcardinality="Single" rtiming="No">
+          <render_choice shuffle="No">
+            <response_label ident="A" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+              <material>
+                <mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[A]]></mattext>
+  
+  
+              </material>
+  
+  
+              <material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+              </material>
+  
+  
+            </response_label>
+  
+  
+            <response_label ident="B" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+              <material>
+                <mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[B]]></mattext>
+  
+  
+              </material>
+  
+  
+              <material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+              </material>
+  
+  
+            </response_label>
+  
+  
+            <response_label ident="C" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+              <material>
+                <mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[C]]></mattext>
+  
+  
+              </material>
+  
+  
+              <material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+              </material>
+  
+  
+            </response_label>
+  
+  
+            <response_label ident="D" rarea="Ellipse" rrange="Exact" rshuffle="Yes">
+              <material>
+                <mattext charset="ascii-us" texttype="text/plain" xml:space="default"><![CDATA[D]]></mattext>
+  
+  
+              </material>
+  
+  
+              <material>
+                <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+              </material>
+  
+  
+            </response_label>
+  
+  
+          <response_label rarea="Ellipse" rrange="Exact" rshuffle="Yes"><material><mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  </material>
+  
+  </response_label>
+  
+  <response_label rarea="Ellipse" rrange="Exact" rshuffle="Yes"><material><mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  </material>
+  
+  </response_label>
+  
+  <response_label rarea="Ellipse" rrange="Exact" rshuffle="Yes"><material><mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  </material>
+  
+  </response_label>
+  
+  <response_label rarea="Ellipse" rrange="Exact" rshuffle="Yes"><material><mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  </material>
+  
+  </response_label>
+  
+  </render_choice>
+  
+  
+        </response_lid>
+  
+  
+      </flow>
+  
+  
+    </presentation>
+  
+  
+    <resprocessing>
+      <outcomes>
+        <decvar defaultval="0" maxvalue="0.0" minvalue="0.0" varname="SCORE" vartype="Integer"></decvar>
+  
+  
+      </outcomes>
+  
+  
+      <respcondition continue="No">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">A</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0.0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="AnswerFeedback"><![CDATA[]]></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+      <respcondition continue="No">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">B</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0.0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="Correct"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="AnswerFeedback"><![CDATA[]]></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+      <respcondition continue="No">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">C</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0.0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="AnswerFeedback"><![CDATA[]]></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+      <respcondition continue="No">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">D</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0.0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="AnswerFeedback"><![CDATA[]]></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">E</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">F</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">G</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">H</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">I</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">J</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">K</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">L</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">M</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">N</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">O</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">P</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">Q</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">R</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">S</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">T</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">U</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">V</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">W</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">X</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">Y</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+      <respcondition continue="Yes">
+        <conditionvar>
+          <varequal case="Yes" respident="MCSC">Z</varequal>
+  
+  
+        </conditionvar>
+  
+  
+        <setvar action="Add" varname="SCORE">0</setvar>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="InCorrect"></displayfeedback>
+  
+  
+        <displayfeedback feedbacktype="Response" linkrefid="D1"></displayfeedback>
+  
+  
+      </respcondition>
+  
+  
+  
+    </resprocessing>
+  
+  
+    <itemfeedback ident="A1" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+    <itemfeedback ident="B1" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+    <itemfeedback ident="C1" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+    <itemfeedback ident="D1" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+    <itemfeedback ident="Correct" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+    <itemfeedback ident="InCorrect" view="All">
+      <flow_mat class="Block">
+        <material>
+          <mattext charset="ascii-us" texttype="text/plain" xml:space="default"></mattext>
+  
+  
+        </material>
+  
+  
+        <material>
+          <matimage embedded="base64" imagtype="text/html" uri=""></matimage>
+  
+  
+        </material>
+  
+  
+      </flow_mat>
+  
+  
+    </itemfeedback>
+  
+  
+  </item>
