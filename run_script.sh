@@ -3,12 +3,12 @@
 # Check if a virtual environment exists
 if [ ! -d "venv" ]; then
   echo "No virtual environment found. Creating one..."
-  python3 -m venv venv
+  python3 -m venv .venv
 fi
 
 # Activate the virtual environment
 echo "Activating virtual environment..."
-source venv/bin/activate
+source .venv/bin/activate
 
 # Display the current date and time
 echo "Starting script at: $(date)"
